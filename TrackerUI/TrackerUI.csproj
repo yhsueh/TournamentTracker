@@ -8,10 +8,11 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>TrackerUI</RootNamespace>
     <AssemblyName>TrackerUI</AssemblyName>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -46,6 +47,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CreatePrize.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreatePrize.Designer.cs">
+      <DependentUpon>CreatePrize.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CreateTeamForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreateTeamForm.Designer.cs">
+      <DependentUpon>CreateTeamForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CreateTournamentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreateTournamentForm.Designer.cs">
+      <DependentUpon>CreateTournamentForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="TournamentViewer.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -54,6 +73,15 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="CreatePrize.resx">
+      <DependentUpon>CreatePrize.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CreateTeamForm.resx">
+      <DependentUpon>CreateTeamForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CreateTournamentForm.resx">
+      <DependentUpon>CreateTournamentForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -62,6 +90,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="TournamentViewer.resx">
       <DependentUpon>TournamentViewer.cs</DependentUpon>
